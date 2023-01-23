@@ -1,5 +1,8 @@
 package ch.bbw.pr.furniture.repository;
+import org.springframework.data.jpa.repository.JpaRepository;
 
-public class DeliveryRepository {
-  
+import ch.bbw.pr.furniture.model.Delivery;
+
+public interface DeliveryRepository extends JpaRepository <Delivery, Long>{
+ 
 }

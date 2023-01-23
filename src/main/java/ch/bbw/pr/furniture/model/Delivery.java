@@ -22,7 +22,6 @@ import jakarta.persistence.JoinColumn;
 
 //import javax.persistence.*;
 
-//testtest first commit
 
 @Getter
 @Setter

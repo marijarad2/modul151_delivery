@@ -1,5 +1,10 @@
 package ch.bbw.pr.furniture.repository;
 
-public class OrderDetailRepository {
+import org.springframework.data.jpa.repository.JpaRepository;
+
+public interface OrderDetailRepository extends JpaRepository <OrderDetailRepository, Long>{
+ 
+  }
   
-}
+  
+
