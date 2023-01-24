@@ -43,4 +43,5 @@ public class Delivery {
    inverseJoinColumns = {@JoinColumn(name = "deliveryidfs")} 
   ) 
   List<OrderDetail> orderdetails = new ArrayList<>();
+  
 }
