@@ -27,11 +27,11 @@ public class OrderDetail{
   @Column(name = "ProductQuantity")
   private int ProductQuantity;
 
-  
-  @ManyToMany(cascade = {CascadeType.ALL}) 
+  //Beziehung ManyToMany
+  @ManyToMany()
   List<Delivery> deliveries = new ArrayList<>();
 
   @OneToOne
-  @JoinColumn(name = "orderidfs", insertable = true, updatable = true)
+  @JoinColumn(name = "orderidfs")
   private Order order;
 }
