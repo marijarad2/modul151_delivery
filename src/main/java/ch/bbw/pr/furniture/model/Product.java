@@ -16,10 +16,9 @@ public class Product{
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long Productid;
 
-  @ManyToOne 
+  @ManyToOne
   @JoinColumn(name = "orderDetailidfs")
   private OrderDetail orderDetail;
 
-  
 }
 
