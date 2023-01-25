@@ -18,11 +18,11 @@ public class Order{
   @GeneratedValue(strategy = GenerationType.IDENTITY)
   private long orderid;
 
+
   @Column(name = "OrderDate")
   private Date OrderDate;
 
-@OneToOne(mappedBy = "OrderDetail")
-private OrderDetail orderDetail;
-
-  
+  @OneToOne(mappedBy = "order")
+  private OrderDetail orderDetail;
+ 
 }
