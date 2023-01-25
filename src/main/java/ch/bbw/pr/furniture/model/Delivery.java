@@ -20,9 +20,6 @@ import lombok.Setter;
 import jakarta.persistence.JoinColumn;
 
 
-//import javax.persistence.*;
-
-
 @Getter
 @Setter
 @NoArgsConstructor
@@ -43,5 +40,5 @@ public class Delivery {
    inverseJoinColumns = {@JoinColumn(name = "deliveryidfs")} 
   ) 
   List<OrderDetail> orderdetails = new ArrayList<>();
-  
+
 }

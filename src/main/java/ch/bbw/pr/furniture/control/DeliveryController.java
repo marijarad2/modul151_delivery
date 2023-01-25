@@ -36,16 +36,7 @@ public class DeliveryController {
                 .orElseThrow(() -> new ResourceNotFoundException("Location existiert nicht mit id:" + id));
         return ResponseEntity.ok(delivery);
     }
-    // build update Location REST API
-    @PutMapping("{id}")
-    public ResponseEntity<Delivery> updateLocation(@PathVariable long id,@RequestBody Delivery deliveryDetails) {
-        Delivery updateDelivery = deliveryRepository.findById(id)
-                .orElseThrow(() -> new ResourceNotFoundException("Location existiert nicht mit id: " + id));
-        updateDelivery.setDeliveryDate(deliveryDetails.getDeliveryDate());
-        updateDelivery.setDeliveryid(deliveryDetails.getDeliveryid());
-        Delivery updatedDelivery = deliveryRepository.save(updateDelivery);
-        return ResponseEntity.ok(updateDelivery);
-    }
+    
     // build delete Location REST API
     @DeleteMapping("{id}")
     public ResponseEntity<HttpStatus> deleteLocation(@PathVariable long id){
@@ -54,4 +45,4 @@ public class DeliveryController {
         deliveryRepository.delete(delivery);
         return new ResponseEntity<>(HttpStatus.NO_CONTENT);
     }
-}
+  }
