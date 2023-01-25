@@ -33,12 +33,12 @@ public class Delivery {
   @Column(name = "deliveryDate")
   private Date deliveryDate;
 
-  @ManyToMany(cascade = {CascadeType.ALL}) 
-  @JoinTable( 
-   name = "OrderDetailDelivery", 
-   joinColumns = {@JoinColumn(name = "orderdetailidfs")}, 
-   inverseJoinColumns = {@JoinColumn(name = "deliveryidfs")} 
-  ) 
+  @ManyToMany()
+  @JoinTable(
+          name = "OrderDetailDelivery",
+          joinColumns = {@JoinColumn(name = "orderdetailidfs")},
+          inverseJoinColumns = {@JoinColumn(name = "deliveryidfs")}
+  )
   List<OrderDetail> orderdetails = new ArrayList<>();
 
 }
